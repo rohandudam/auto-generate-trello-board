@@ -1,5 +1,5 @@
 --------
-A Python Trello API utility Script to create Trello Boards, Cards etc
+A Python Trello API utility Script to create Trello Boards, Cards etc. Here we create more number of boards per theme.
 --------
 You can use this script to :
 
@@ -34,7 +34,7 @@ If you ran into some problems on step (d), please report them as an issue or ema
 COMMANDS FOR RUNNING SCRIPT
 ---------------------------
 
-python test_trello_util.py
+python test_auto_generate_trello_board.py
 
 
 --------
