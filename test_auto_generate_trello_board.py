@@ -1,5 +1,5 @@
 """
-Sample test to Create a board using trello util
+Sample test to create a multiple board using trello util
 """
 from trello_util import Trello_Util
 from conf import key,token
@@ -10,6 +10,7 @@ import datetime
 import pandas as pd
 
 def test_trello_util(key,token):
+    "Run api test to generate the boards"
     # Creating an object of Trello Util
     test_obj = Trello_Util(key,token)
     startdate = datetime.datetime(year,mm,dd)
@@ -28,14 +29,15 @@ def test_trello_util(key,token):
         if result_flag == True:
             print ("Able to add card with name %s"% new_board_name)
         else :
-            print ("Not able to add with name %s"% new_board_name)
+            print ("Unable to add with name %s"% new_board_name)
 
         # Add list (swim lane) to board
         result_flag = test_obj.add_list(new_board_name,list_names)
         if result_flag == True:
             print ("Able to add list %s to board name %s"%(list_names,new_board_name))
         else :
-            print ("Not able to add list %s to board name %s"%(list_names,new_board_name))
+            print ("Unable to add list %s to board name %s"%(list_names,new_board_name))
 
+# Start of script:-
 if __name__ == '__main__':
     test_trello_util(key=key,token=token)
