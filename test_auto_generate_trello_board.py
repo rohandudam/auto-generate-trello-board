@@ -4,7 +4,7 @@ Sample test to create a multiple board using trello util
 from trello_util import Trello_Util
 from conf import key,token
 import time
-from data_conf import board_names,list_names,sample_board,sample_cards,member_ids,member_username,board_number,year,mm,dd
+from data_conf import board_names,list_names,sample_cards,member_ids,member_username,board_number,year,mm,dd
 import pickle
 import datetime
 import pandas as pd
@@ -20,7 +20,7 @@ def test_trello_util(key,token):
     for board_name in board_names:        
         new_board_number = new_board_number + 1
         current_board_date = pd.to_datetime(startdate) + pd.DateOffset(days=7)
-        new_board_name = str(new_board_number) + "." + str(board_name) + "("+ str(current_board_date.strftime("%d-%b-%Y")) + ")"
+        new_board_name = str(new_board_number) + ". " + str(board_name) + " ("+ str(current_board_date.strftime("%d-%b-%Y")) + ")"
         startdate = current_board_date
         print (new_board_name)
     
