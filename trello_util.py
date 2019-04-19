@@ -3,7 +3,7 @@ import conf as conf
 from datetime import datetime
 
 class Trello_Util:
-    " Trello util to create board, card, copy card and add members"    
+    "Trello util to create board, card, copy card and add members"    
 
     def __init__(self,key,token):
         self.auth = {'key':key,'token':token}
@@ -30,6 +30,7 @@ class Trello_Util:
 
     
     def get_board_names(self):
+        "Get list of board names"
         get_board_url = 'https://api.trello.com/1/members/me/boards'
         board_list=[]
         try:
@@ -57,7 +58,7 @@ class Trello_Util:
 
 
     def add_member_board(self,new_board_name,email_ids):
-        " Add members to the board"
+        "Add members to the board"
         result_flag = True
         board_id = self.get_board_id_by_name(new_board_name)
         url = self.url+"/boards/"+board_id +"/members"
@@ -75,7 +76,7 @@ class Trello_Util:
 
 
     def add_member_card(self,new_board_name,card_name,member_username):
-        " Add members to the board"
+        "Add members to the board"
         result_flag = True
         member_list_id = []
         board_id = self.get_board_id_by_name(new_board_name)
@@ -97,6 +98,7 @@ class Trello_Util:
                 result_flag &=False        
 
         return result_flag
+
 
     def add_list(self,board_name,list_names):
         "Add a list for a board"
@@ -190,7 +192,7 @@ class Trello_Util:
 
     
     def change_preferences(self,board_name,pref):
-        # change the visibility/preferences of a board
+        "Change the visibility/preferences of a board"
         result_flag = True
         board_id = self.get_board_id_by_name(board_name)
         url = self.url+"/boards/"+board_id
