@@ -1,5 +1,9 @@
+-----------------
+Our test will automate the creation of a Trello board, along with other provided details like trello card, members with a duration set to 1 week.
+-----------------
+
 --------
-A Python Trello API utility Script to create Trello Boards, Cards etc. Here we create more number of boards per theme.
+A Python Trello API utility script to create Trello Boards, Cards, add members and many other things.
 --------
 You can use this script to :
 
@@ -22,14 +26,15 @@ You can refer to blog(https://qxf2.com/blog/python-trello-api-utility-script/) f
 ------
 Setup 
 ------
-Update the Trello API Key and Token in conf.py file
-
-Update the data like board name, card name etc in data_conf.py
+a) Install the requirements
+pip install -r requirements.txt
+b) Generate the API key and token by following this link https://trello.com/app-key
+c) Update the Trello API Key and Token in the conf.py file
+d) Update the required data like board names, list names, date, card name, member names in the data_conf.py
 
 If you ran into some problems on step (d), please report them as an issue or email Avinash(avinash@qxf2.com)
 
-
-
+This script will run only on Python3.
 ---------------------------
 COMMANDS FOR RUNNING SCRIPT
 ---------------------------
